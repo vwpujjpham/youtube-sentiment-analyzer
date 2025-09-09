@@ -84,7 +84,7 @@ source myenv/bin/activate  # Mac/Linux
   <hr>
 
   <h2>License</h2>
-  <p>This project is for personal use and learning purposes. Feel free to fork and explore!</p>
+  <p>This project is for personal use and learning purposes.</p>
 
 </body>
 </html>
