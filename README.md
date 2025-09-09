@@ -84,7 +84,7 @@ macro avg       0.66      0.68      0.65        64
 weighted avg    0.73      0.67      0.68        64</code></pre>
     </li>
   </ul>
-  <p><em>Insights:</em> Positive comments are easiest for the model to detect, neutral comments are hardest, and the model performs decently as a baseline. The model can be very inaccurate, as the training data is extremely limited. Although it states a 67% accuracy rate, the real accuracy is unfortunately unlikely to be even near this amount.</p>
+  <p><em>Insights:</em> Positive comments are easiest for the model to detect, neutral comments are hardest, and the model performs decently as a baseline. The model can be very inaccurate, as the training data is extremely limited. Although it states a 67% accuracy rate, the real accuracy is unfortunately unlikely to be even near this amount. (Creating and labeling more training data is very time consuming, so I unfortunately will not do it)</p>
 
   <hr>
 
