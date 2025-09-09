@@ -64,6 +64,30 @@ source myenv/bin/activate  # Mac/Linux
 
   <hr>
 
+  <h2>Model Performance</h2>
+  <p>The sentiment analysis model uses a <strong>Multinomial Naive Bayes</strong> pipeline with TF-IDF features. On a test set of YouTube comments, it achieved:</p>
+  <ul>
+    <li><strong>Test Accuracy:</strong> 0.67 (~67%)</li>
+    <li><strong>Class distribution in dataset:</strong>
+      <pre><code>negative: 112
+positive: 106
+neutral: 102</code></pre>
+    </li>
+    <li><strong>Classification Report:</strong>
+      <pre><code>              precision    recall  f1-score   support
+negative       0.64      0.76      0.70        21
+neutral        0.44      0.67      0.53        12
+positive       0.90      0.61      0.73        31
+
+accuracy                           0.67        64
+macro avg       0.66      0.68      0.65        64
+weighted avg    0.73      0.67      0.68        64</code></pre>
+    </li>
+  </ul>
+  <p><em>Insights:</em> Positive comments are easiest for the model to detect, neutral comments are hardest, and the model performs decently as a baseline. The model can be very inaccurate, as the training data is extremely limited. Although it states a 67% accuracy rate, the real accuracy is unfortunately unlikely to be even near this amount.</p>
+
+  <hr>
+
   <h2>Technologies</h2>
   <ul>
     <li>Python 3.10+</li>
@@ -71,6 +95,7 @@ source myenv/bin/activate  # Mac/Linux
     <li>Google API Client (<code>googleapiclient</code>)</li>
     <li>NLP libraries (<code>nltk</code>, <code>textblob</code> or <code>vaderSentiment</code>)</li>
     <li>Pandas & Altair for data processing and visualization</li>
+    <li>Scikit-learn for model building and evaluation</li>
   </ul>
 
   <hr>
@@ -79,6 +104,7 @@ source myenv/bin/activate  # Mac/Linux
   <ul>
     <li>Make sure your API key has access to the YouTube Data API v3.</li>
     <li>The app fetches a limited number of comments per video to respect API quotas.</li>
+    <li>The model metrics are based on a test split of available data and serve as a baseline for improvement.</li>
   </ul>
 
   <hr>
